@@ -40,22 +40,13 @@ def list_manipulation(lst, command, location, value=None):
         >>> list_manipulation(lst, 'add', 'dunno') is None
         True
     """
-# l.append(x)	    Add x to end of of list
-# l.copy()	        Return shallow copy of list l
-# l.count(x)	    Return # times x appears in l
-# l.extend(l2)	    Add items of l2 to l
-# l.index(x)	    Return (0-based) index of x in l
-# l.insert(i, x)	Insert x at position i
-# l.pop(i)	        Remove & return item at i (default last)
-# l.reverse()	    Reverse list (change in place)
-# l.sort()	        Sort list in place
-
 
     if command == "remove":
-        if location == "beginning":
-            return lst.pop(0)
-        elif location == "end":
+        if location == "end":
             return lst.pop()
+        elif location == "beginning":
+            return lst.pop(0)
+
     elif command == "add":
         if location == "beginning":
             lst.insert(0, value)
@@ -63,8 +54,3 @@ def list_manipulation(lst, command, location, value=None):
         elif location == "end":
             lst.append(value)
             return lst
-    # return None
-
-
-
-

@@ -4,11 +4,5 @@ def compact(lst):
         >>> compact([0, 1, 2, '', [], False, (), None, 'All done'])
         [1, 2, 'All done']
     """
-    # trueLst = []
-    # for item in list:
-    #     if item:
-    #         trueLst.append(item)
 
-    # return trueLst
-
-    return [item for item in lst if item]
+    return [val for val in lst if val]
